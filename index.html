@@ -231,19 +231,10 @@
 
 <body>
 
-  <div class="container">
-    <div class="timer-box">
-      <div class="timer-title">ESSA OFERTA EXPIRA EM:</div>
-      <div class="timer-count" id="countdown">30:00</div>
-    </div>
 
-    <div class="secure-box">
-      COMPRA 100% SEGURA
-    </div>
-  </div>
 
   <!-- IFRAME FULL WIDTH AQUI -->
-  <iframe class="full-iframe" src="https://front.enviazap.net/checkout/12/816fa14c-0334-43e0-ad32-f34ec0bfe0c4">
+  <iframe class="full-iframe" src="https://culonga.com/checkout/13e9a4cb-95f8-4699-bf00-8dede0e9a1ed">
   </iframe>
 
   <script src="https://cdn.jsdelivr.net/npm/notiflix@2.6.0/dist/notiflix-aio-2.6.0.min.js"></script>
@@ -308,37 +299,7 @@
     setTimeout(show_notification, 10000);
   </script>
 
-  <script>
-    const countdownElement = document.getElementById("countdown");
 
-    const totalTime = 30 * 60;
-
-    let endTime = localStorage.getItem("offer_end_time");
-
-    if (!endTime) {
-      endTime = Date.now() + totalTime * 1000;
-      localStorage.setItem("offer_end_time", endTime);
-    }
-
-    function updateCountdown() {
-      const now = Date.now();
-      const timeLeft = Math.floor((endTime - now) / 1000);
-
-      if (timeLeft <= 0) {
-        countdownElement.textContent = "TEMPO ESGOTADO!";
-        return;
-      }
-
-      const minutes = Math.floor(timeLeft / 60);
-      const seconds = timeLeft % 60;
-
-      countdownElement.textContent =
-        `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
 
 
 
